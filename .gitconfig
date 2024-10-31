@@ -1,0 +1,38 @@
+[push]
+    default = tracking
+#[core]
+    #sshCommand = ssh -i ~/.ssh/id_rsa_wangry
+[alias]
+	ck = "!f() { git checkout \"$@\"; }; f"
+	mg = "!f() { git merge \"$@\"; }; f"
+	cmp = "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+	cm = "!f() { git add -A && git commit -m\"$@\"; }; f"
+	s = "!f() { git status; }; f"
+	st = "!f() { git stash list; }; f"
+	br = "!f() { git branch \"$@\"; }; f"
+	l = "!f() { git pull; }; f"
+	p = "!f() { git push; }; f"
+	dog ="!f() { git log --graph --decorate --oneline --all; }; f"
+	sh ="!f() { git show -5 | grep diff | cut -d \" \" -f 3; }; f"
+[user]
+	email = 8905779+qiuqi06@user.noreply.gitee.com
+	name = qiuqi06
+[core]
+	quotepath = false
+[i18n "commit"]
+	encoding = utf-8
+[gui]
+	encoding = utf-8
+[i18n]
+	logoutputencoding = utf-8
+[http "https://git.code.oa.com"]
+	proxy = http://127.0.0.1:12639
+[http "http://git.code.oa.com"]
+	proxy = http://127.0.0.1:12639
+#[http]
+#    sslVerify = false
+#    proxy = http://127.0.0.1:12639
+[credential]
+	helper = store
+[url "git@git.code.oa.com"]  #finally user this
+	insteadOf = https://git.code.oa.com/ //be replaced,match
