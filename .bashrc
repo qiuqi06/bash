@@ -1,11 +1,14 @@
-export LC_ALL=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-unalias grep
+#unalias grep
+alias st="sudo /usr/local/mysql/support-files/mysql.server start"
+alias stp="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias rsa="cat ~/.ssh/id_rsa.pub|pbcopy"
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
+alias ll='ls -l --color'
 alias gs='git status'
 alias gb='git branch'
-alias du='du -d 1 -h'
+alias du='du -d 1 -h|sort -h'
 alias gl='git pull'
 alias hg='history|grep'
 alias grv='git remote -v'
@@ -48,11 +51,12 @@ alias gca='git commit --amend'
 alias gfu='git fetch --unshallow'
 alias cvi='ls -a|grep "\.swp\b"|xargs rm -f'
 alias mk='mkdir'
-alias dcl='docker login -uqiuqi@coding.net -pqq123456Q'
+alias dcl='docker login -uqiuqi06 -pqq123456Q'
 alias sc='cat ~/.ssh/id_rsa.pub|pbcopy'
 alias wsc='type ~/.ssh/id_rsa.pub|clip'
 alias pup='pip3 install --upgrade pip'
 alias pi='pip3 install '
+alias pu='pip3 uninstall -y'
 alias vhost='sudo vim /etc/hosts'
 alias gra="git remote add origin "
 alias fpg="flutter pub get"
@@ -78,7 +82,7 @@ de(){
 	docker exec -it "$@" bash
 }
 pk() { 
-	for procid in $(ps -ef | grep "$@"|grep -v grep | awk '{print $2}'); do kill -9 $procid; done
+	for procid in $(ps -ef | grep "$@"|grep -v grep | awk '{print $2}');do sudo kill -9 $procid; done
 }
 lk(){
 	lsof -i:"$@"|awk '{print $2}'|sed -n '2p'| xargs kill -9
@@ -111,16 +115,12 @@ recho(){
 gro(){
 	git remote rm origin; git remote add origin "$@"
 }
-bd(){
-	for i in `ls`; do ;if [ -d $i ]; then;cd $i; "$@";cd ..;fi; done
-}
-psg(){ps -ef|grep "$@"|grep -v grep}
 
 # if [ -x "$(command -v gap)" ]; then
 # unalias gap
 # fi
 
-#$@ must surround with " not '
+#$nvnumber也可以@ must surround with " not '
 mkc(){
 	mkdir "$@";cd "$@"
 }
@@ -164,15 +164,23 @@ recho(){
 gro(){
 	git remote rm origin; git remote add origin "$@"
 }
-bd(){
-	for i in `ls`; do ;if [ -d $i ]; then;cd $i; "$@";cd ..;fi; done
-}
-psg(){ps -ef|grep "$@"|grep -v grep}
 
+psg(){
+	ps -ef|grep "$@"|grep -v grep 
+}
+
+clean_mvn(){
+	find ~/.m2/repository -name "*.lastUpdated" -exec rm {} \;
+	find ~/.gradle -name "*.lastUpdated" -exec rm {} \; 	
+}
+  
 if [ `uname` = "Darwin" ]; then
 	alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code' 
-	alias mvnrm='find ~/.m2/repository -name "*.lastUpdated" -exec rm {} \;find ~/.gradle -name "*.lastUpdated" -exec rm {} \;'
+	alias mvnrm='clean_mvn'
+	alias xq='xattr -r -d com.apple.quarantine'
+	bd(){
+		for i in `ls`; do if [ -d $i ]; then cd $i; "$@"; cd ..; fi; done
+	}
 elif [[ `uname` =~ "MINGW" || `uname` =~ "MSYS" ]]; then
 	echo win
 fi
-
