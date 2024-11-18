@@ -5,7 +5,7 @@ alias st="sudo /usr/local/mysql/support-files/mysql.server start"
 alias stp="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias rsa="cat ~/.ssh/id_rsa.pub|pbcopy"
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
-alias ll='ls -l --color'
+alias ll='ls -lah --color'
 alias gs='git status'
 alias gb='git branch'
 alias du='du -d 1 -h|sort -h'
@@ -27,7 +27,6 @@ alias gfa='git fetch --all --prune'
 alias gfo='git fetch origin'
 alias git='LANG=en_GB git'
 alias sup='git push --set-upstream origin $(git_current_branch)'
-alias ll='ls -alh'
 alias lg='ls -al|grep'
 alias lt='ls --color -lrtl'
 alias bi='brew install'
@@ -64,6 +63,7 @@ alias fpu="flutter pub update"
 alias fpo="flutter pub outdated"
 alias fc="flutter clean"
 alias fr="flutter run"
+alias fpbb='flutter pub run build_runner build'
 
 unalias gap > /dev/null 2>&1
 
