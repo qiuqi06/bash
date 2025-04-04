@@ -1,0 +1,32 @@
+#!/usr/bin/expect -f
+set hostname [lindex $argv 0]
+set username [lindex $argv 1]
+set password [lindex $argv 2]
+set port [lindex $argv 3]
+set timeout 30
+#set force_conservative 1
+#if {$force_conservative} {
+#  set send_slow {128 .1}
+#}
+set port 9283
+set username root
+set hostname "104.243.129.250"
+
+set password "Z48^J&7m3HnVZQCN"
+
+spawn ssh -p $port $username@$hostname
+
+expect {
+    "yes/no" {
+    	send  "yes\r"; exp_continue
+    }
+    "password" {
+        send "$password\r"; exp_continue
+    }
+    "$username@" {
+        send "cd /opt/deepfm/feature;source /opt/deepcrt_env/bin/activate \r"
+    }
+}
+
+interact
+#expect eof
