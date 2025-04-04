@@ -1,6 +1,8 @@
 #export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #unalias grep
+#alias sb="killall -u $(whoami) && sudo reboot"
+alias sb="sudo reboot"
 alias st="sudo /usr/local/mysql/support-files/mysql.server start"
 alias stp="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias rsa="cat ~/.ssh/id_rsa.pub|pbcopy"
