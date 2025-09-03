@@ -36,3 +36,8 @@
 	helper = store
 [url "git@git.code.oa.com"]  #finally user this
 	insteadOf = https://git.code.oa.com/ //be replaced,match
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
