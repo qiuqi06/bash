@@ -1,7 +1,8 @@
-alias python="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/python3.12"
+#alias python="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/python3.12"
 alias python3='/usr/bin/python3'
 alias pip3='/usr/bin/pip3'
-alias pip="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/pip3.12"
+alias pip='/usr/bin/pip3'
+#alias pip="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/pip3.12"
 #export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #unalias grep
@@ -12,6 +13,7 @@ alias stp="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias rsa="cat ~/.ssh/id_rsa.pub|pbcopy"
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 alias ll='ls -lah --color'
+alias mvn="/Applications/IntelliJ\ IDEA.app/Contents/plugins/maven/lib/maven3/bin/mvn"
 alias gs='git status'
 alias gb='git branch'
 alias du='du -d 1 -h|sort -h'
