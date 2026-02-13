@@ -1,7 +1,8 @@
-alias python="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/python3.12"
+#alias python="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/python3.12"
 alias python3='/usr/bin/python3'
 alias pip3='/usr/bin/pip3'
-alias pip="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/pip3.12"
+alias pip='/usr/bin/pip3'
+#alias pip="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/pip3.12"
 #export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #unalias grep
@@ -61,7 +62,7 @@ alias dcl='docker login -uqiuqi06 -pqq123456Q'
 alias sc='cat ~/.ssh/id_rsa.pub|pbcopy'
 alias wsc='type ~/.ssh/id_rsa.pub|clip'
 alias pup='pip install --upgrade pip'
-alias pi='pip install '
+alias pi='pip3 install '
 alias pu='pip uninstall -y'
 alias vhost='sudo vim /etc/hosts'
 alias gra="git remote set-url origin "
