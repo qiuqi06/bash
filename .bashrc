@@ -13,6 +13,7 @@ alias stp="sudo /usr/local/mysql/support-files/mysql.server stop"
 alias rsa="cat ~/.ssh/id_rsa.pub|pbcopy"
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 alias ll='ls -lah --color'
+alias mvn="/Applications/IntelliJ\ IDEA.app/Contents/plugins/maven/lib/maven3/bin/mvn"
 alias gs='git status'
 alias gb='git branch'
 alias du='du -d 1 -h|sort -h'

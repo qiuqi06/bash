@@ -15,8 +15,8 @@
 	dog ="!f() { git log --graph --decorate --oneline --all; }; f"
 	sh ="!f() { git show -5 | grep diff | cut -d \" \" -f 3; }; f"
 [user]
-	email = 8905779+qiuqi06@user.noreply.gitee.com
-	name = qiuqi06
+	email = qiuqi06@user.noreply.gitee.com
+	name = qq
 [core]
 	quotepath = false
 [i18n "commit"]
@@ -41,3 +41,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[url "ssh://git@gitlab.quguazhan.com:2222/"]
+	insteadOf = https://gitlab.quguazhan.com/
+[url "ssh://git@codeup.aliyun.com"]
+  	insteadOf = https://codeup.aliyun.com
+[pull]
+	rebase = false
