@@ -1,41 +1,41 @@
 # 压缩类：主力 Keka
 com.apple.archiveutility .zip all
 #com.aone.keka .zip all
-com.aone.keka .7z all
 com.aone.keka .rar all
-com.aone.keka .tar all
 com.aone.keka .gz all
 com.aone.keka .bz2 all
 com.aone.keka .xz all
 com.aone.keka .zst all
 com.aone.keka .iso all
 com.aone.keka .dmg all
+#com.aone.keka public.zip-archive all
+com.aone.keka org.7-zip.7-zip-archive all
+com.aone.keka public.tar-archive all
 
 # com.Ababe.UnzipAnyFile 备用
 
 
 # 顺手把开发常用也绑了
-com.microsoft.VSCode .json all
 com.microsoft.VSCode .md all
 com.microsoft.VSCode .py all
 com.microsoft.VSCode .go all
-com.microsoft.VSCode .rs all
 com.microsoft.VSCode .Vue all
 com.microsoft.VSCode .js all
 com.microsoft.VSCode .ts all
-com.microsoft.VSCode .sh all
-com.microsoft.VSCode .yaml all
 com.microsoft.VSCode .yml all
 com.microsoft.VSCode .toml all
 com.microsoft.VSCode .sql all
 com.microsoft.VSCode .cnf all
 com.microsoft.VSCode .ini all
 com.microsoft.VSCode .swift all
+com.microsoft.VSCode public.python-script all
+com.microsoft.VSCode public.shell-script all
+com.microsoft.VSCode public.yaml all
 
+#dev.zed.Zed .rs all
 dev.zed.Zed .txt all
 dev.zed.Zed .text all
-dev.zed.Zed .json all
-dev.zed.Zed .jsonl all
+dev.zed.Zed public.json all
 
 ai.l0ng.openidea .java all
 
