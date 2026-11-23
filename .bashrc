@@ -1,8 +1,14 @@
-#alias python="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/python3.12"
-alias python3='/usr/bin/python3'
+pp="/opt/homebrew/bin/python3.12"
+#alias python3='/usr/bin/python3'
+alias python='/opt/homebrew/bin/python3.12'
+alias python3='/opt/homebrew/bin/python3.12'
+alias pyp='python -c "import sys; print(sys.path)"'
+alias pi='${pp} -m pip install --break-system-packages'
+alias pip='${pp} -m pip --break-system-packages'
+alias piv='${pp} -m pip index versions'
+alias pup='${pp} -m pip install --break-system-packages --upgrade pip'
+alias pu='${pp} -m pip pip uninstall -y'
 alias pip3='/usr/bin/pip3'
-alias pip='/usr/bin/pip3'
-#alias pip="/opt/homebrew/Cellar/python@3.12/3.12.10/bin/pip3.12"
 #export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 #unalias grep
@@ -14,6 +20,7 @@ alias rsa="cat ~/.ssh/id_rsa.pub|pbcopy"
 alias airport='/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport'
 alias ll='ls -lah --color'
 alias mvn="/Applications/IntelliJ\ IDEA.app/Contents/plugins/maven/lib/maven3/bin/mvn"
+alias caf="nohup caffeinate -i -s /opt/homebrew/bin/python3.12 -u ts-rise-check.py >a.log &"
 alias gs='git status'
 alias gb='git branch'
 alias du='du -d 1 -h|sort -h'
@@ -62,9 +69,6 @@ alias mk='mkdir'
 alias dcl='docker login -uqiuqi06 -pqq123456Q'
 alias sc='cat ~/.ssh/id_rsa.pub|pbcopy'
 alias wsc='type ~/.ssh/id_rsa.pub|clip'
-alias pup='pip install --upgrade pip'
-alias pi='pip3 install '
-alias pu='pip uninstall -y'
 alias vhost='sudo vim /etc/hosts'
 alias gra="git remote set-url origin "
 alias fpg="flutter pub get"
@@ -73,7 +77,9 @@ alias fpo="flutter pub outdated"
 alias fc="flutter clean"
 alias fr="flutter run"
 alias fpbb='flutter pub run build_runner build'
-alias piv="pip3 index versions"
+alias gmt="go mod tidy"
+alias gmtd="go mod tidy && go mod download all"
+alias gmd="go list -m all | xargs go mod download"
 
 unalias gap > /dev/null 2>&1
 
@@ -197,3 +203,9 @@ fi
 
 
 alias cc='sh ~/qq/bash/clear_proxy.sh'
+
+# icode-cli
+export PATH="/Users/qiuqi/go/bin/:/Users/qiuqi/.icode/bin:$PATH"
+export PUB_HOSTED_URL="https://pub.flutter-io.cn"
+export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
+
