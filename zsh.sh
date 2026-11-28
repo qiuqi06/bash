@@ -17,6 +17,8 @@ alias s='source ~/.zshrc'
 export DEBUG=true
 export SCALA_HOME=/opt/homebrew/bin/scala
 export PATH=$PATH:$GOROOT/bin:$SCALA_HOME/bin:$HOME/.cargo/bin:/usr/local/bin:/opt/homebrew/bin
+export EDITOR=vim 
+
 
 function zle-keymap-select {
 	if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
